@@ -1,0 +1,42 @@
+{
+	"name": "with-postgres-drizzle",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"db:bootstrap": "npm run db:migrate && npm run db:seed",
+		"db:seed": "npx tsx lib/db/seed.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "npx tsx lib/db/migrate.ts",
+		"db:studio": "drizzle-kit studio"
+	},
+	"dependencies": {
+		"@monolayer/workloads": "^2.0.1",
+		"drizzle-kit": "^0.31.1",
+		"drizzle-orm": "^0.43.1",
+		"drizzle-seed": "^0.3.1",
+		"lucide-react": "^0.511.0",
+		"next": "15.3.2",
+		"pg": "^8.16.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"reshaped": "^3.5.3"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/pg": "^8.15.2",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.3.2",
+		"prettier": "^3.5.3",
+		"prettier-plugin-organize-imports": "^4.1.0",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	}
+}
